@@ -8,5 +8,5 @@ def HomePage(request):
 def AboutPage(request):
     return render(request, 'school/about.html')
 
-# def ContactPage(request):
-#     return  
+def ContactPage(request):
+    return render(request, 'school/contact.html') 
