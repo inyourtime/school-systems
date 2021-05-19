@@ -1,0 +1,39 @@
+{% extends 'school/base.html' %} 
+
+{% block content %}
+
+<style>
+    table,
+    th,
+    td {
+        border: 1px solid black;
+        border-collapse: collapse;
+    }
+
+    th,
+    td {
+        padding: 5px;
+    }
+
+    th {
+        text-align: left;
+    }
+</style>
+
+<div class="container">
+    <table style="width: 100%; margin-top: 100px">
+        <tr>
+            <th>วิชา</th>
+            <th>ชื่อนักเรียน</th>
+            <th>คะแนนสอบ</th>
+        </tr>
+        {% for sc in score %}
+        <tr>
+            <td>{{ sc.subject }}</td>
+            <td>{{ sc.student_name }}</td>
+            <td>{{ sc.score }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</div>
+{% endblock content %}
